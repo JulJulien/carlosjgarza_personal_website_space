@@ -2,6 +2,9 @@ import './homescreen.css';
 import { Row, Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import React, { useRef, useState, useEffect } from 'react';
+import { HiMail } from "react-icons/hi";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 function Header(){
   return (
@@ -11,6 +14,18 @@ function Header(){
         <button className="homepage-button">Resume</button>
         <button className="homepage-button">Projects</button>
         <button className="homepage-button">Designs</button>
+        <div className="icon-group">
+          <button className="header-icon">
+            <HiMail />
+          </button>
+          <button className="header-icon">
+            <FaLinkedin />
+          </button>
+          <button className="header-icon">
+            <FaGithub />
+          </button>
+        </div>
+
       </div>
     </div>
   )
@@ -21,6 +36,11 @@ function Title(){
     <div className="homepage-name">
       <h1>Carlos Julien Garza</h1>
       <h2>Software Engineer | Data Science | Design</h2>
+      <div className="icon-group">
+        <button className="header-icon-2">
+          <HiMail />
+        </button>
+      </div>
     </div>
   )
 }
