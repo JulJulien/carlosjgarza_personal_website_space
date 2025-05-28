@@ -1,35 +1,9 @@
-import './homescreen.css';
+import './styles/homescreen.css';
 import { Row, Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import React, { useRef, useState, useEffect } from 'react';
 import { HiMail } from "react-icons/hi";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 
-function Header(){
-  return (
-    <div className="homepage-container-header"> 
-      <div className="homepage-header">
-        <button className="homepage-button">About</button>
-        <button className="homepage-button">Resume</button>
-        <button className="homepage-button">Projects</button>
-        <button className="homepage-button">Designs</button>
-        <div className="icon-group">
-          <button className="header-icon">
-            <HiMail />
-          </button>
-          <button className="header-icon">
-            <FaLinkedin />
-          </button>
-          <button className="header-icon">
-            <FaGithub />
-          </button>
-        </div>
-
-      </div>
-    </div>
-  )
-}
 
 function Title(){
   return (
@@ -53,20 +27,7 @@ function ScrollIndicator() {
   )
 }
 
-function AboutMe(){
-  return (
-    <div className="about-me-container">
-      <img 
-        src="/images/profile.jpg" 
-        alt="Profile" 
-        className="about-me-profile-image"
-      />
-      <div className="about-me-container-description">
-        <p>Hello! I'm Carlos Julien Garza, a software engineer with a passion for building products that help people live better lives. I love working on data science, design, and innovative technology projects.</p>
-      </div>
-    </div>
-  )
-}
+
 
 function Homescreen() {
   const videoRef = useRef(null);
@@ -89,7 +50,6 @@ function Homescreen() {
   return (
     <>
       <div className="homepage-container">
-        <Header />
         <Title />
         <ScrollIndicator />
         <div style={{position: 'relative', width: '100%', height: '100vh'}}>
@@ -106,8 +66,6 @@ function Homescreen() {
           </video>         
         </div>
       </div>
-      <AboutMe />
-
     </>
   )
 };

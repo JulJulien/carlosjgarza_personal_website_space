@@ -1,0 +1,136 @@
+.resume-full-page{
+    width:100%;
+    background-color: #000621;
+}
+
+.resume-container1{
+    padding-top: 150px;
+    width:100%;
+    background-color: #000621;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-image{
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.resume-container2{
+    padding-top: 120px;
+    width:70%;
+    max-width: 1200px;
+    background-color: #000621;
+    margin: 0 auto;
+}
+/* ==========================================================================
+   Resume Container Styles
+   ========================================================================== */
+   .container-section {
+    display: flex;
+    margin: 0 auto;
+    min-height: 10vh;
+    border-radius: 10px;
+    padding: 20px;
+    border: 5px solid #000000;  /* Blue border for work experience */
+    margin-bottom: 50px;
+    background-color: #ebebeb;
+}
+
+
+/* ==========================================================================
+   Work Experience Styles
+   ========================================================================== */
+.experience-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid #000000;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Experience Header
+   ========================================================================== */
+.experience-header {
+    margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.company {
+    font-weight: 600;
+    color: #000000;
+}
+
+.location {
+    color: #666;
+    font-size:1rem;
+}
+
+.date {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 1rem;
+}
+
+/* Experience Details
+   ========================================================================== */
+.experience-details {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-details li {
+    margin-bottom: 8px;
+    color: #212529;
+    line-height: 1.5;
+}
+
+.experience-details li:last-child {
+    margin-bottom: 0;
+}
+
+.title{
+    font-size: 2em;   
+    font-weight: bold;
+    color: #000000;
+}
+
+
