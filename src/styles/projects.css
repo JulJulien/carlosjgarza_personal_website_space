@@ -1,0 +1,99 @@
+.portfolio-full-page {
+    width: 100%;
+    background: #000621;
+}
+
+.portfolio-container {
+    padding: 5%;
+    width: 70%;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in;
+
+}
+
+/* Fade animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.fade-enter {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-exit {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(400px, 2fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background: 000621;
+    border-color: rgb(255, 255, 255);
+    border-width: 5px;
+    border-style: solid;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.00);
+}
+
+.portfolio-thumbnail {
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-thumbnail img {
+    width: 100%;
+    border-bottom-color: black;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    object-fit: cover;
+}
+
+.portfolio-bottom-container {
+    background: white;
+}
+
+.portfolio-title {
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+
+.portfolio-description {
+    color: white;
+    padding: 0 1rem 1rem;
+    text-align: center;
+}
+
