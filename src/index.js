@@ -6,9 +6,9 @@ import Homescreen from './homescreen';
 import AboutMe from './aboutme';
 import Resume from './resume';
 import Projects from './projects';
-import Designs from './designs';
 import Navbar from './navbar';
 import reportWebVitals from './reportWebVitals';
+import Designs from './designs';
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 

@@ -62,7 +62,7 @@ function Homescreen() {
             preload="auto"
             ref={videoRef}
           >
-            <source src="/videos/saturn.mp4" type="video/mp4" />
+            <source src={require("./assets/videos/saturn.mp4")} type="video/mp4" />
           </video>         
         </div>
       </div>

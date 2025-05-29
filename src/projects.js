@@ -1,14 +1,10 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './styles/projects.css';
-import { HiMail } from "react-icons/hi";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";  
+
 import { FaSpotify } from "react-icons/fa";
-// pyton, openai, pytorch, c#, unity engine
 import { FaPython } from "react-icons/fa";
 import { RiOpenaiFill } from "react-icons/ri";
-import { FaPytorch } from "react-icons/fa";
 import { FaUnity } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
