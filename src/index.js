@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css';
@@ -10,9 +10,28 @@ import Designs from './designs';
 import Navbar from './navbar';
 import reportWebVitals from './reportWebVitals';
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+
+// Smooth scroll
+window.scrollTo({
+  top: 0,
+  behavior: 'smooth'
+});
+
+
 function App() {
   const [currentTab, setCurrentTab] = useState('About');
 
+  // Add useEffect to handle smooth scrolling when tab changes
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [currentTab]); // This will run whenever currentTab changes
+ 
   return (
     <>
       <Navbar setCurrentTab={setCurrentTab} />

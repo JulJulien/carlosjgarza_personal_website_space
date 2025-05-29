@@ -19,8 +19,15 @@ function ThisWebsite(){
 
 function AboutMe(){
   return (
-    <div>
-      <h1>About Me</h1>
+    <div className="container">
+      <div className="aboutme-container">
+        <div className="aboutme-container-left">
+          <h1>About Me</h1>
+        </div>
+        <div className="aboutme-container-right">
+          <h1>This Website</h1>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #000621;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.aboutme-container{
+    width: 70%;
+    min-height: 100px;
+    justify-content: center;
+    color: white;
+    display: flex;
+    border: 5px solid #000000;
+    background-color: #ebebeb;
+}
+
+.aboutme-container-left{
+    width: 50%;
+    height: 100%;
+}
+
+.aboutme-container-right{
+    width: 50%;
+    height: 100%;
+}
+
+

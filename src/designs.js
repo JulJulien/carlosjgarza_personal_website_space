@@ -1,11 +1,15 @@
+
+import React from 'react';
 import './styles/designs.css';
 
-function Designs(){
-    return (
-        <div>
-            <h1>Designs</h1>
-        </div>
-    )
-}
+const Designs = () => {
+  return (
+    <div className="designs-container">
+      <h1>Designs</h1>
+    </div>
+  );
+};
 
 export default Designs;
+
+
