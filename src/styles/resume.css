@@ -51,7 +51,6 @@
 
 .resume-container2{
     padding-top: 150px;
-    width:70%;
     max-width: 1200px;
     background-color: #000621;
     margin: 0 auto;
@@ -61,6 +60,7 @@
    Resume Container Styles
    ========================================================================== */
    .container-section {
+    width: 70%;
     display: flex;
     margin: 0 auto;
     min-height: 10vh;

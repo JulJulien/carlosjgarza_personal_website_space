@@ -1,30 +1,101 @@
-.container{
+.full-container-aboutme {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #000621;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    overflow-x: hidden;
 }
 
-.aboutme-container{
-    width: 70%;
-    min-height: 100px;
-    justify-content: center;
+.blue-container{
+    width: 100%;
+    position: relative;
+    background-color: #00318B;
+    font-size: 20px;
+    text-align: center;
     color: white;
+    padding-top: 150px;
+    padding-bottom: 450px;
+}
+
+.blue-container h1{
+    font-size: 40px;
+    padding-bottom: 40px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blue-container p{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Welcome-aboutme{
+    width: 100%;
+    height: 100%;
+    background-color: #00318B;
     display: flex;
-    border: 5px solid #000000;
-    background-color: #ebebeb;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f8f8ff;
 }
 
-.aboutme-container-left{
-    width: 50%;
-    height: 100%;
+.ThreeSections {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    top: 70%;
+    transform: translateY(40%);
+    transform: translateX(40%);
+    border: none;
+    color: #222;
+    position: absolute;
+    z-index: 2;
+    border-radius: 24px;
 }
 
-.aboutme-container-right{
-    width: 50%;
-    height: 100%;
+.section {
+    width: 32%;
+    background: #f8f8ff;
+    border-radius: 20px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.icon {
+    width: 64px;
+    height: 64px;
+    background: #ff7e7e;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
 
+.title-aboutme {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.subtitle-aboutme {
+    color: #000000;
+    font-style: bold;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+.description-aboutme {
+    text-align: center;
+    margin-bottom: 12px;
+    color: #444;
+}

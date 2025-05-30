@@ -5,7 +5,7 @@
 
 .portfolio-container {
     padding: 5%;
-    width: 70%;
+    width: 60%;
     animation: fadeIn 1s ease-in;
 }
 
@@ -48,17 +48,14 @@
 .portfolio-item {
     background: #000621;
     border-color: rgb(255, 255, 255);
-    border-width: 5px;
     border-style: solid;
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
-
-    border-radius: 20px;
 }
 
 .portfolio-item:hover {
     transform: scale(1.02);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.15s ease-in-out;
     cursor: pointer;
 }
 
