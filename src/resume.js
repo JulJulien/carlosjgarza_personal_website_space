@@ -13,8 +13,7 @@ function ResumeImage(){
 function ScrollIndicator(){
     return (
         <div className="scroll-indicator">
-            <div className="arrow"></div>
-            <p> More Information</p>
+            <div className="arrow1"></div>
         </div>
     );
 }

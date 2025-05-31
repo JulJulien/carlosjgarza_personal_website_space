@@ -1,8 +1,11 @@
 .homepage-container-header{
+  max-height: 65px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    padding-top: 15px;
+    padding-bottom: 12px;
     z-index: 100;
     cursor:auto;
     display: flex;
@@ -18,12 +21,14 @@
     transition: all 0.3s ease;
     background: none;
     cursor: pointer;
-    padding: 10px 80px;
+    padding: 0px 80px;
+    padding-bottom: 60px;
     font-weight: 500;
     border-style: solid;
     border-width: 2px;
     border-color: transparent;
     border-radius: 10px;  
+
   }
   
   .homepage-button.selected {
@@ -61,7 +66,7 @@
   }
 
   .icon-group .header-icon:hover {
-    color: rgb(255, 126, 126);
+    color: #ff7e7e;
     scale: 1.15;
     transition: scale 0.5s ease;
   }  

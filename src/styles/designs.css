@@ -1,0 +1,187 @@
+.designs-full-container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000621;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.gallery-item{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 5px solid white;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    animation: fadeIn 1s ease-in;
+}
+
+.download-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    width: 30px;
+    height: 75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.download-btn:hover{
+    color: #ff7e7e;
+}
+
+.gallery-item:hover .download-btn {
+    opacity: 1;
+}
+
+.gallery-item:hover{
+    transform: scale(1.02);
+    transition: transform 0.15s ease-in;
+    cursor: pointer;
+}
+
+.description{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.gallery {
+  column-width: 400px;      /* Minimum width for each column */
+  column-gap: 1rem;         /* Space between columns */
+  width: 50%;
+  margin-top: 100px;
+}
+
+.gallery-item {
+  display: inline-block;     /* Needed for column layout */
+  width: 100%;
+  margin-bottom: 1rem;       /* Space between items vertically */
+}
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-media {
+  max-width: 98vw;
+  max-height: 98vh;
+  min-width: 40vw;
+  min-height: 40vh;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 32px 8px rgba(0,0,0,0.5);
+  background: #000;
+  display: block;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+  background: #ff7e7e;
+  color: #fff;
+}
+
+.slideshow-item {
+  position: relative;
+}
+
+.slideshow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.2s;
+}
+
+.slideshow-btn.left {
+  left: 10px;
+}
+
+.slideshow-btn.right {
+  right: 10px;
+}
+
+.slideshow-item:hover .slideshow-btn {
+  opacity: 1;
+}
+
+.lightbox-content .slideshow-btn {
+  opacity: 1;
+  background: rgba(0,0,0,0.85);
+}
+
+.slideshow-btn:hover {
+  background: #ff7e7e;
+  color: #fff;
+}

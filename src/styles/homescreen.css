@@ -10,6 +10,7 @@
   overflow: hidden;
   background-color: #000621; /* Dark gray background */
   user-select: none; /* Prevents text selection */
+  
 }
 
 .homepage-name {
@@ -25,24 +26,22 @@
 }
 
 .homepage-name h1 {
-  font-size: 48px;
+  font-size: 52px;
   margin-bottom: 20px;
   font-weight: 700;
+  animation: fadeIn 1.5s ease-out;
+  transition: all 0.3s ease;
 }
 
 .homepage-name h2 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 30px;
   color: rgb(255, 126, 126);
   font-weight: 500;
+  animation: fadeIn 1.5s ease-out;
+  transition: all 0.3s ease;
 }
 
-
-.homepage-name-subtitle{
-  color: white;
-  font-size: 10px;
-  text-align: center;
-}
 
 .scroll-indicator {
   position: absolute;
@@ -133,6 +132,8 @@
   height: 100vh;
   object-fit: cover;
   top: -75px; /* Raised the video to be centered height wise */
+  animation: fadeIn 1.5s ease-out;
+  transition: all 0.3s ease;
 }
 
 .icon-group .header-icon-2 {

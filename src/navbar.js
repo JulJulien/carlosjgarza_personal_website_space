@@ -14,33 +14,33 @@ function Header({ currentTab, setCurrentTab }) {
           About
         </button>
         <button 
-          className={`homepage-button ${currentTab === 'Resume' ? 'selected' : ''}`}
-          onClick={() => setCurrentTab('Resume')}
-        >
-          Resume
-        </button>
-        <button 
           className={`homepage-button ${currentTab === 'Projects' ? 'selected' : ''}`}
           onClick={() => setCurrentTab('Projects')}
         >
           Projects
         </button>
         <button 
+          className={`homepage-button ${currentTab === 'Resume' ? 'selected' : ''}`}
+          onClick={() => setCurrentTab('Resume')}
+        >
+          Resume
+        </button>
+        <button 
           className={`homepage-button ${currentTab === 'Designs' ? 'selected' : ''}`}
           onClick={() => setCurrentTab('Designs')}
         >
-          Designs
+          Gallery
         </button>
         <div className="icon-group">
-          <button className="header-icon">
+          <a className="header-icon" href="mailto:cjulgarza@gmail.com" title="Email">
             <HiMail />
-          </button>
-          <button className="header-icon">
+          </a>
+          <a className="header-icon" href="https://www.linkedin.com/in/carlosj-garza/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedin />
-          </button>
-          <button className="header-icon">
+          </a>
+          <a className="header-icon" href="https://github.com/JulJulien?tab=repositories" target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub />
-          </button>
+          </a>
         </div>
     </div>
   )
