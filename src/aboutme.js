@@ -22,30 +22,32 @@ function ThreeSections(){
     <div className="ThreeSections">
       <div className="DeveloperSection section">
         <div className="icon"><FaCode /></div>
-        <div className="title-aboutme">Developer</div>
-        <div className="description-aboutme">I love building web apps and tools.</div>
-        <div className="subtitle-aboutme">Languages I use:</div>
-        <div>JavaScript, Python, HTML, CSS</div>
+        <div className="title-aboutme">Software</div>
+        <div className="description-aboutme">I create software that is useful, creative and architecturally sound.</div>
+        <div className="subtitle-aboutme">Languages:</div>
+        <div>Python, C#, HTML, CSS, JavaScript, React, SQL, R</div>
         <div className="subtitle-aboutme">Dev Tools:</div>
-        <div>VS Code, GitHub, Docker</div>
+        <div>GitHub<br/>VS Code<br/>Cursor <br/>Pytorch</div>
       </div>
       <div className="DataScienceSection section">
         <div className="icon"><ImStatsBars /></div>
         <div className="title-aboutme">Data Science</div>
-        <div className="description-aboutme">I analyze data and build models.</div>
+        <div className="description-aboutme">I have practical experience in data science and bioinformatics by working alongside recognized experts in the field.</div>
         <div className="subtitle-aboutme">Skills:</div>
-        <div>Python, R, SQL, Pandas</div>
+        <div> Machine Learning, Bioinformatics, Research, Database Design, Data Analysis</div>
         <div className="subtitle-aboutme">Tools:</div>
-        <div>Jupyter, Tableau, scikit-learn</div>
+        <div>Python<br/>R<br/>SQL<br/>Jupyter<br/>Pytorch</div>
       </div>
       <div className="ArtSection section">
         <div className="icon"><FaPaintbrush /></div>
         <div className="title-aboutme">Art</div>
-        <div className="description-aboutme">I create digital and traditional art.</div>
+        <div className="description-aboutme">In my free time I enjoy creating art. You can see some of my works in the Gallery!</div>
         <div className="subtitle-aboutme">Mediums:</div>
-        <div>Digital, Watercolor, Ink</div>
+        <div>3D Digital, Pixel, Ink</div>
         <div className="subtitle-aboutme">Tools:</div>
-        <div>Procreate, Photoshop, Pen & Paper</div>
+        <div>Aesprite</div>
+        <div>Blender</div>
+        <div>Pen Lineart</div>
       </div>
     </div>
   )

@@ -1,8 +1,9 @@
 .full-container-aboutme {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000621;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
@@ -11,24 +12,29 @@
 .blue-container{
     width: 100%;
     position: relative;
-    background-color: #00318B;
+    background-color: #012e81;
     font-size: 20px;
     text-align: center;
     color: white;
-    padding-top: 150px;
-    padding-bottom: 450px;
+    padding: 80px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .blue-container h1{
-    font-size: 40px;
-    padding-bottom: 40px;
-    width: 50%;
+    font-size: 48px;
+    padding-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .blue-container p{
     width: 30%;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
     margin-left: auto;
     margin-right: auto;
 }
@@ -45,27 +51,37 @@
 }
 
 .ThreeSections {
-    width: 55%;
+    width: 70%;
+    max-width: 1100px;
     display: flex;
     justify-content: space-between;
-    top: 70%;
-    transform: translateY(40%);
-    transform: translateX(40%);
-    border: none;
-    color: #222;
-    position: absolute;
+    align-items: flex-start;
+    position: static;
+    left: unset;
+    transform: none;
+    bottom: unset;
     z-index: 2;
     border-radius: 24px;
+    padding: 40px 0;
+    margin: 0 auto;
+    background: none;
+    box-shadow: none;
 }
 
 .section {
     width: 32%;
     background: #f8f8ff;
+    color:black;
     border-radius: 20px;
     padding: 32px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.section:hover {
+    transform: scale(1.01);
+    transition: transform 0.15s ease-in;
 }
 
 .icon {
@@ -89,7 +105,7 @@
 .subtitle-aboutme {
     color: #000000;
     font-style: bold;
-    font-weight: 500;
+    font-weight: 700;
     margin-top: 16px;
     margin-bottom: 4px;
 }
