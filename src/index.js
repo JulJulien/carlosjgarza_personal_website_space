@@ -34,7 +34,7 @@ function App() {
  
   return (
     <>
-      <Navbar setCurrentTab={setCurrentTab} />
+      <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
         {currentTab === 'About' && <Homescreen />}
         {currentTab === 'About' && <AboutMe />}
         {currentTab === 'Resume' && <Resume />}

@@ -33,18 +33,12 @@
   
   .homepage-button.selected {
     color: rgb(255, 126, 126);
-    border-color: rgb(255, 126, 126);
     transform: scale(1.05);
   }
-
-  .homepage-button:hover:not(.selected) {
+  
+  .homepage-button:hover {
     color: rgb(255, 126, 126);
     transform: scale(1.025);
-  }
-
-  .homepage-button:active{
-    color: rgb(255, 126, 126);
-    transform: scale(0.975);
   }
 
   .icon-group {
