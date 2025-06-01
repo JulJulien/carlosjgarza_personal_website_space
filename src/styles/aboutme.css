@@ -1,25 +1,47 @@
 .full-container-aboutme {
     width: 100%;
     min-height: 100vh;
-    background-color: #000621;
+    /* Two solid colors: top half dark navy, bottom half medium blue */
+    background: linear-gradient(180deg, #000621 50%, #012e81 50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+/* Remove the decorative rectangles since we're doing background sections instead */
+.full-container-aboutme::before,
+.full-container-aboutme::after {
+    display: none;
 }
 
 .blue-container{
     width: 100%;
     position: relative;
-    background-color: #012e81;
+    background: linear-gradient(180deg, #012e81 0%);
     font-size: 20px;
     text-align: center;
     color: white;
-    padding: 80px 0 40px 0;
+    padding: 80px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Remove blue container decorative rectangles */
+.blue-container::before,
+.blue-container::after {
+    display: none;
+}
+
+/* Remove the separate decoration rectangles */
+.decoration-rect {
+    display: none;
 }
 
 .blue-container h1{
@@ -27,7 +49,6 @@
     padding-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .blue-container p{
@@ -39,15 +60,73 @@
     margin-right: auto;
 }
 
-.Welcome-aboutme{
+/* Personal story section with different background */
+.personal-story-section {
     width: 100%;
-    height: 100%;
-    background-color: #00318B;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #1a4480 0%);
+    position: relative;
+    z-index: 2;
+    padding: 40px 0;
+}
+
+.personal-story-section .story-content {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.personal-story-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.personal-story-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f8f8ff;
+    text-align: left;
+}
+
+/* Layout for about me section */
+.about-me-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.profile-image-container {
+    width: 25%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #f8f8ff;
+    flex-shrink: 0;
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text-container {
+    flex: 1;
+}
+
+/* Skills section with original blue */
+.skills-section-wrapper {
+    width: 100%;
+    background: linear-gradient(180deg, #012e81 0%);
+    padding: 60px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .ThreeSections {
@@ -71,17 +150,32 @@
 .section {
     width: 32%;
     background: #f8f8ff;
-    color:black;
+    color: black;
     border-radius: 20px;
     padding: 32px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .section:hover {
     transform: scale(1.01);
     transition: transform 0.15s ease-in;
+}
+
+/* Individual section styles */
+.DeveloperSection {
+    /* Inherits from .section */
+}
+
+.DataScienceSection {
+    /* Inherits from .section */
+}
+
+.ArtSection {
+    /* Inherits from .section */
 }
 
 .icon {
@@ -114,4 +208,136 @@
     text-align: center;
     margin-bottom: 12px;
     color: #444;
+}
+
+/* Contact section with accent background */
+.contact-section {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section .contact-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #f8f8ff;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+.contact-icon {
+    font-size: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-me-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-image-container {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    .ThreeSections {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .section {
+        width: 100%;
+    }
+    
+    .contact-section .contact-container {
+        width: 320px;
+        height: 320px;
+        padding: 30px;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-section p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .contact-links {
+        gap: 25px;
+    }
+    
+    .contact-icon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section .contact-container {
+        width: 280px;
+        height: 280px;
+        padding: 25px;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-links {
+        gap: 20px;
+    }
+    
+    .contact-icon {
+        font-size: 1.6rem;
+    }
 }

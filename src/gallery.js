@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/designs.css';
+import './styles/gallery.css';
 import { Col, Row } from 'react-bootstrap';
 import { IoMdDownload, IoMdClose, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -72,19 +72,26 @@ function Gallery(){
         // require("./assets/pixel/golem,minotaur-export.png"),
     ];
 
-
-
     const items = [
-        { type: 'video', src: require("./assets/videos/saturn.mp4"), alt: "design-2" },
-        { type: 'image', src: require("./assets/pixel/Humans.png"), alt: "design-2" },
-        { type: 'image', src: require("./assets/pixel/skeletons-export.png"), alt: "design-2" },
+        { type: 'video', src: require("./assets/videos/saturn.mp4"), alt: "Saturn Animation" },
+        { type: 'image', src: require("./assets/drawings/MouseKnight.jpg"), alt: "Mouse Knight Drawing" },
+        { type: 'image', src: require("./assets/pixel/Humans.png"), alt: "Pixel Art Humans" },
+
+        { type: 'image', src: require("./assets/drawings/Cat.jpg"), alt: "Cat Drawing" },
+        { type: 'image', src: require("./assets/drawings/Swans.jpg"), alt: "Swans Drawing" },
+        { type: 'image', src: require("./assets/pixel/skeletons-export.png"), alt: "Pixel Art Skeletons" },
+        { type: 'image', src: require("./assets/drawings/Rango.jpg"), alt: "Rango Character Drawing" },
         // { type: 'slideshow', images: slideshowImagesEx, alt: "slideshow" },
-        { type: 'image', src: require("./assets/pixel/golem,minotaur-export.png"), alt: "design-4" },
-        { type: 'image', src: require("./assets/pixel/beholder.png"), alt: "design-5" },
+        { type: 'image', src: require("./assets/pixel/golem,minotaur-export.png"), alt: "Pixel Art Golem and Minotaur" },
+        
+        { type: 'image', src: require("./assets/pixel/beholder.png"), alt: "Pixel Art Beholder" },
+        { type: 'image', src: require("./assets/drawings/Sandman.jpg"), alt: "Sandman Drawing" },
+        { type: 'image', src: require("./assets/drawings/LeMajor.jpg"), alt: "Le Major Drawing" },
+        { type: 'image', src: require("./assets/drawings/Sandmad.jpg"), alt: "Sandmad Drawing" },
     ];
 
     return(
-        <div className="designs-full-container">
+        <div className="gallery-full-container">
             <div className="gallery">
                 {items.map((item, idx) => {
                     if(item.type === 'slideshow') {
@@ -101,4 +108,4 @@ function Gallery(){
     )
 }
 
-export default Gallery;
+export default Gallery; 

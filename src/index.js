@@ -5,10 +5,11 @@ import './styles/index.css';
 import Homescreen from './homescreen';
 import AboutMe from './aboutme';
 import Resume from './resume';
-import Projects from './projects';
+import Portfolio from './portfolio';
 import Navbar from './navbar';
+import Footer from './footer';
 import reportWebVitals from './reportWebVitals';
-import Designs from './designs';
+import Gallery from './gallery';
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
@@ -38,8 +39,9 @@ function App() {
         {currentTab === 'About' && <Homescreen />}
         {currentTab === 'About' && <AboutMe />}
         {currentTab === 'Resume' && <Resume />}
-        {currentTab === 'Projects' && <Projects />}
-        {currentTab === 'Designs' && <Designs />}
+        {currentTab === 'Portfolio' && <Portfolio />}
+        {currentTab === 'Gallery' && <Gallery />}
+      <Footer currentTab={currentTab} setCurrentTab={setCurrentTab} />
     </>
   )
 }

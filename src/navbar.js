@@ -14,10 +14,10 @@ function Header({ currentTab, setCurrentTab }) {
           About
         </button>
         <button 
-          className={`homepage-button ${currentTab === 'Projects' ? 'selected' : ''}`}
-          onClick={() => setCurrentTab('Projects')}
+          className={`homepage-button ${currentTab === 'Portfolio' ? 'selected' : ''}`}
+          onClick={() => setCurrentTab('Portfolio')}
         >
-          Projects
+          Portfolio
         </button>
         <button 
           className={`homepage-button ${currentTab === 'Resume' ? 'selected' : ''}`}
@@ -26,8 +26,8 @@ function Header({ currentTab, setCurrentTab }) {
           Resume
         </button>
         <button 
-          className={`homepage-button ${currentTab === 'Designs' ? 'selected' : ''}`}
-          onClick={() => setCurrentTab('Designs')}
+          className={`homepage-button ${currentTab === 'Gallery' ? 'selected' : ''}`}
+          onClick={() => setCurrentTab('Gallery')}
         >
           Gallery
         </button>

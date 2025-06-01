@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import './styles/projects.css';
+import './styles/portfolio.css';
 
 import { FaSpotify } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
@@ -53,7 +53,7 @@ function CSharpIcon() {
     );
 }
 
-function Projects() {
+function Portfolio() {
         
     const portfolioItems = [
         {
@@ -136,6 +136,4 @@ function Projects() {
     );
 }
 
-export default Projects;
-
-
+export default Portfolio; 

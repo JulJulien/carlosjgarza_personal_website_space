@@ -1,6 +1,7 @@
 .resume-full-page{
     width:100%;
     background-color: #000621;
+    padding-bottom: 100px; /* Add space for footer */
 }
 
 .resume-container1{
@@ -54,6 +55,7 @@
     max-width: 1200px;
     background-color: #000621;
     margin: 0 auto;
+    padding-bottom: 50px; /* Extra padding for last section */
 }
 
 /* ==========================================================================

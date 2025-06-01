@@ -1,0 +1,111 @@
+.portfolio-full-page {
+    width: 100%;
+    background: #000621;
+    padding-bottom: 100px; /* Add space for footer */
+}
+
+.portfolio-container {
+    padding: 5%;
+    width: 60%;
+    animation: fadeIn 1s ease-in;
+    padding-bottom: 8%; /* Extra padding for last items */
+}
+
+/* Fade animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.fade-enter {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-exit {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    grid-template-rows: repeat(auto-fit, minmax(400px, 2fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background: #000621;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.portfolio-thumbnail {
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-thumbnail img {
+    width: 100%;
+    border-bottom-color: black;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    object-fit: cover;
+}
+
+.portfolio-bottom-container {
+    background: transparent;
+    border-top: 5px solid white;
+}
+
+.portfolio-title {
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+
+.portfolio-description {
+    color: white;
+    text-align: center;
+}
+
+
+.portfolio-bottom-container-icons{
+    height: 100%;
+    display: flex;
+    color: white;
+    font-size: 3em;
+    justify-content: center;
+    padding-bottom: 1rem;
+    gap: 1rem;
+}
+
+
+.devicon-csharp-plain-wordmark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+} 
