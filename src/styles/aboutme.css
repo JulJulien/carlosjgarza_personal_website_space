@@ -65,45 +65,44 @@
     width: 100%;
     margin: 0;
     text-align: center;
-    background: linear-gradient(135deg, #1a4480 0%);
+    background: linear-gradient(135deg, #012e81 0%);
     position: relative;
     z-index: 2;
     padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.personal-story-section .story-content {
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+.about-me-card {
+    width: 80%;
+    max-width: 1500px;
+    background: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.personal-story-section h2 {
+.about-me-card h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: white;
+    color: black;
     font-weight: bold;
+    text-align: center;
 }
 
-.personal-story-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #f8f8ff;
-    text-align: left;
-}
-
-/* Layout for about me section */
-.about-me-layout {
+.top-section {
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .profile-image-container {
-    width: 25%;
-    height: 25%;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,8 +111,57 @@
 
 .profile-image-container img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+}
+
+.social-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ff7e7e;
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+.social-icon {
+    font-size: 24px;
+}
+
+.about-paragraphs {
+    text-align: left;
+}
+
+.about-paragraphs p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Layout for about me section */
+.about-me-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .about-text-container {
@@ -127,6 +175,41 @@
     padding: 60px 0;
     position: relative;
     z-index: 2;
+}
+
+/* Philosophy section with similar styling */
+.philosophy-section-wrapper {
+    width: 100%;
+    background: linear-gradient(180deg, #012e81 0%);
+    padding: 60px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.philosophy-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.PhilosophySections {
+    width: 70%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: static;
+    left: unset;
+    transform: none;
+    bottom: unset;
+    z-index: 2;
+    border-radius: 24px;
+    padding: 40px 0;
+    margin: 0 auto;
+    background: none;
+    box-shadow: none;
 }
 
 .ThreeSections {
@@ -278,6 +361,50 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .about-me-card {
+        width: 95%;
+        padding: 30px 20px;
+    }
+    
+    .about-me-card h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .profile-image-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .social-links-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 0;
+    }
+    
+    .social-link {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 14px;
+    }
+    
+    .social-icon {
+        font-size: 20px;
+    }
+    
+    .about-paragraphs p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
     .about-me-layout {
         flex-direction: column;
         align-items: center;
@@ -289,6 +416,11 @@
     }
     
     .ThreeSections {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .PhilosophySections {
         flex-direction: column;
         gap: 20px;
     }
@@ -323,6 +455,32 @@
 }
 
 @media (max-width: 480px) {
+    .about-me-card {
+        width: 98%;
+        padding: 25px 15px;
+    }
+    
+    .about-me-card h2 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-image-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .social-link {
+        font-size: 12px;
+    }
+    
+    .social-icon {
+        font-size: 18px;
+    }
+    
+    .about-paragraphs p {
+        font-size: 0.95rem;
+    }
+    
     .contact-section .contact-container {
         width: 280px;
         height: 280px;

@@ -87,7 +87,6 @@ function Gallery(){
         { type: 'image', src: require("./assets/pixel/beholder.png"), alt: "Pixel Art Beholder" },
         { type: 'image', src: require("./assets/drawings/Sandman.jpg"), alt: "Sandman Drawing" },
         { type: 'image', src: require("./assets/drawings/LeMajor.jpg"), alt: "Le Major Drawing" },
-        { type: 'image', src: require("./assets/drawings/Sandmad.jpg"), alt: "Sandmad Drawing" },
     ];
 
     return(

@@ -5,6 +5,7 @@ import { ImStatsBars } from "react-icons/im";
 import { FaPaintbrush } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLightbulb, FaPuzzlePiece, FaBookOpen } from "react-icons/fa";
 import { Row, Col } from 'react-bootstrap';
 
 function BlueContainer({ children }) {
@@ -22,27 +23,38 @@ function BlueContainer({ children }) {
 function PersonalStorySection() {
   return (
     <div className="personal-story-section">
-      <div className="story-content">
+      <div className="about-me-card">
         <h2>About Me</h2>
-        <div className="about-me-layout">
+        <div className="top-section">
           <div className="profile-image-container">
-              {/* Placeholder for profile image - you can replace this with an actual image */
-              <img src={require("./assets/drawings/LeMajor.jpg")} alt="Profile" />
-              }
-              <span>Your Photo Here</span>
+            <img src={require("./assets/drawings/LeMajor.jpg")} alt="Profile" />
           </div>
-          <div className="about-text-container">
-            <p>
-              My path into technology started during my undergraduate studies, where I discovered the perfect intersection 
-              of creativity and logic that programming offers. What began as curiosity about how websites work evolved 
-              into a deep passion for building solutions that make a difference.
-            </p>
-            <p>
-              Through my experience at UTRGV and hands-on projects, I've learned that the best software comes from 
-              understanding both the technical challenges and the human needs behind them. Whether I'm analyzing complex 
-              datasets or crafting user interfaces, I'm driven by the opportunity to turn ideas into reality.
-            </p>
+          <div className="social-links-container">
+            <a href="mailto:cjulgarza@gmail.com" className="social-link">
+              <HiMail className="social-icon" />
+              <span>gmail</span>
+            </a>
+            <a href="https://www.linkedin.com/in/carlosj-garza/" target="_blank" rel="noopener noreferrer" className="social-link">
+              <FaLinkedin className="social-icon" />
+              <span>linkedin</span>
+            </a> 
+            <a href="https://github.com/JulJulien?tab=repositories" target="_blank" rel="noopener noreferrer" className="social-link">
+              <FaGithub className="social-icon" />
+              <span>github</span>
+            </a>
           </div>
+        </div>
+        <div className="about-paragraphs">
+          <p>
+            My path into technology started during my undergraduate studies, where I discovered the perfect intersection 
+            of creativity and logic that programming offers. What began as curiosity about how websites work evolved 
+            into a deep passion for building solutions that make a difference.
+          </p>
+          <p>
+            Through my experience at UTRGV and hands-on projects, I've learned that the best software comes from 
+            understanding both the technical challenges and the human needs behind them. Whether I'm analyzing complex 
+            datasets or crafting user interfaces, I'm driven by the opportunity to turn ideas into reality.
+          </p>
         </div>
       </div>
     </div>
@@ -87,6 +99,32 @@ function ThreeSections(){
   )
 }
 
+function PhilosophySection(){
+  return (
+    <div className="philosophy-section-wrapper">
+      <div className="PhilosophySections">
+
+        <div className="MultidisciplinarySection section">
+          <div className="icon"><FaPuzzlePiece /></div>
+          <div className="title-aboutme">Multidisciplinary</div>
+          <div className="description-aboutme">In this new AI era, it's important to incorprate programming into various speciatlties. Having multiple skills allows you to communicate and  work with more people!</div>
+        </div>
+
+        <div className="CreativitySection section">
+          <div className="icon"><FaLightbulb /></div>
+          <div className="title-aboutme">Creativity</div>
+          <div className="description-aboutme">I believe that innovation comes from thinking outside conventional boundaries and approaching problems with fresh perspectives.</div>
+        </div>
+
+        <div className="LearningSection section">
+          <div className="icon"><FaBookOpen /></div>
+          <div className="title-aboutme">Learning</div>
+          <div className="description-aboutme">I'm always pushing myself to learn new things. Whether it is art, data, coding, or biology. Exploring your interests and expanding your knowledge leads to oppurtunity!</div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function ContactSection() {
   return (
@@ -119,6 +157,7 @@ function AboutMe() {
       <BlueContainer>
         <ThreeSections />
         <PersonalStorySection />
+        <PhilosophySection />
         <ContactSection />
       </BlueContainer>
     </div>
