@@ -9,7 +9,7 @@ function Title(){
   return (
     <div className="homepage-name">
       <h1>Carlos Julien Garza</h1>
-      <h2>Software Engineer | Data Science | Art</h2>
+      <h2>Data Science | Software | Art</h2>
       <div className="icon-group">
         <button className="header-icon-2">
           <HiMail />

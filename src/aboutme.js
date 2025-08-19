@@ -13,7 +13,7 @@ function BlueContainer({ children }) {
     <div className="blue-container">
       <h1>Welcome to my website!</h1>
       <p>
-        I'm Carlos, a software developer and data scientist with a passion for building web apps and analyzing data.
+        I'm Carlos, a data scientist with a background in Computer Science and analytical research.
       </p>
       {children}
     </div>
@@ -68,20 +68,20 @@ function ThreeSections(){
         <div className="DeveloperSection section">
           <div className="icon"><FaCode /></div>
           <div className="title-aboutme">Software</div>
-          <div className="description-aboutme">I create software that is useful, creative and architecturally sound.</div>
+          <div className="description-aboutme">I use my expierience in CS to create games, websites, and other fun projects!</div>
           <div className="subtitle-aboutme">Languages:</div>
-          <div>Python, C#, HTML, CSS, JavaScript, React, SQL, R</div>
+          <div>Python, C#, HTML, CSS, JavaScript, React</div>
           <div className="subtitle-aboutme">Dev Tools:</div>
-          <div>GitHub<br/>VS Code<br/>Cursor <br/>Pytorch</div>
+          <div>GitHub<br/>VS Code<br/>PyTorch <br/>RStudio<br/>Unity</div>
         </div>
         <div className="DataScienceSection section">
           <div className="icon"><ImStatsBars /></div>
           <div className="title-aboutme">Data Science</div>
-          <div className="description-aboutme">I have practical experience in data science and bioinformatics by working alongside recognized experts in the field.</div>
+          <div className="description-aboutme">I have practical experience in data science and genomic research by working alongside experts in the field!</div>
           <div className="subtitle-aboutme">Skills:</div>
-          <div> Machine Learning, Bioinformatics, Research, Database Design, Data Analysis</div>
+          <div> Data Cleaning, Data Analysis, Data Visualization, Communication</div>
           <div className="subtitle-aboutme">Tools:</div>
-          <div>Python<br/>R<br/>SQL<br/>Jupyter<br/>Pytorch</div>
+          <div>Python<br/>R<br/>SQL<br/>RStudio<br/>Tableau</div>
         </div>
         <div className="ArtSection section">
           <div className="icon"><FaPaintbrush /></div>
@@ -119,37 +119,47 @@ function PhilosophySection(){
         <div className="LearningSection section">
           <div className="icon"><FaBookOpen /></div>
           <div className="title-aboutme">Learning</div>
-          <div className="description-aboutme">I'm always pushing myself to learn new things. Whether it is art, data, coding, or biology. Exploring your interests and expanding your knowledge leads to oppurtunity!</div>
+          <div className="description-aboutme">I'm always pushing myself to learn and read about new things. Whether it is art, statistics, coding, biology, or psychology. Exploring your interests and expanding your knowledge leads to oppurtunity!</div>
         </div>
       </div>
     </div>
   )
 }
 
-function ContactSection() {
-  return (
-    <div className="contact-section">
-      <div className="contact-container">
-        <h2>Let's Connect</h2>
-        <p></p>
-        <div className="contact-links">
-          <a href="mailto:cjulgarza@gmail.com" className="contact-link">
-            <HiMail className="contact-icon" />
-            <span>cjulgarza@gmail.com</span>
-          </a>
-          <a href="https://www.linkedin.com/in/carlosj-garza/" target="_blank" rel="noopener noreferrer" className="contact-link">
-            <FaLinkedin className="contact-icon" />
-            <span>www.linkedin.com/in/carlosj-garza</span>
-          </a> 
-          <a href="https://github.com/JulJulien?tab=repositories" target="_blank" rel="noopener noreferrer" className="contact-link">
-            <FaGithub className="contact-icon" />
-            <span>github.com/JulJulien</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
+  function BooksSection(){
+    return (
+      <div className="books-section-wrapper">
+        <h2>Books I Recommend</h2>
+        <div className="books-section">
+          <div className="book-image">
+            <img src={require("./assets/books/onasunbeam_image.jpg")} alt="On a Sunbeam" />
+            <div className="book-description">
+              You can actually read this one for free online. It's about a highschool grad that feels lost, joins a space maintence crew, and refelcts on her past love life. It has great, loose art and beautiful color palettes.
+            </div>
+          </div>
+          <div className="book-image">
+            <img src={require("./assets/books/practicalstatsforDS_image.jpg")} alt="Practical Statistics for Data Scientists" />
+            <div className="book-description">
+              After my internship I wanted to develop the mathmateical foundations for Data Science. This book covers EDA, Data Distributions, Significance Testing, Regression, Classifications, ML, and Unsupervised ML. I learned a lot from it! 
+            </div>
+          </div>
+          <div className="book-image">
+            <img src={require("./assets/books/thetunnel_image.jpg")} alt="The Tunnel" />
+            <div className="book-description">
+              An obsessive artist explains what led to him killing his lover. It's haunting, funny, sometimes relatable, but mostly tragic. 
+            </div>
+          </div>
+          <div className="book-image">
+            <img src={require("./assets/books/theworldofedena_image.jpg")} alt="The World of Edena" />
+            <div className="book-description">
+              Moebius wrote and drew this sci-fi epic. It follows 2 space travelers as they get seperated on a lost paradise planet. By the end of the book, the plot devolves into total dreamlike surrealism. The art is incredible, as is Moebius standard.  
+            </div>
+          </div>
+                 </div>
+       </div>
+     )
+   }
+
 
 function AboutMe() {
   return (
@@ -158,7 +168,7 @@ function AboutMe() {
         <ThreeSections />
         <PersonalStorySection />
         <PhilosophySection />
-        <ContactSection />
+        <BooksSection />
       </BlueContainer>
     </div>
   );
