@@ -20,10 +20,10 @@ function Header({ currentTab, setCurrentTab }) {
           Portfolio
         </button>
         <button 
-          className={`homepage-button ${currentTab === 'Resume' ? 'selected' : ''}`}
-          onClick={() => setCurrentTab('Resume')}
+          className={`homepage-button ${currentTab === 'Experience' ? 'selected' : ''}`}
+          onClick={() => setCurrentTab('Experience')}
         >
-          Resume
+          Experience
         </button>
         <button 
           className={`homepage-button ${currentTab === 'Gallery' ? 'selected' : ''}`}

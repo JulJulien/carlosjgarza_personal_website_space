@@ -146,7 +146,7 @@ function PhilosophySection(){
           <div className="book-image">
             <img src={require("./assets/books/thetunnel_image.jpg")} alt="The Tunnel" />
             <div className="book-description">
-              An obsessive artist explains what led to him killing his lover. It's haunting, funny, sometimes relatable, but mostly tragic. 
+              An obsessive paranoid artist explains what led to him killing his lover. It's haunting, funny, sometimes relatable, but mostly tragic. 
             </div>
           </div>
           <div className="book-image">

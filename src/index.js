@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css';
 import Homescreen from './homescreen';
 import AboutMe from './aboutme';
-import Resume from './resume';
+import Experience from './experience';
 import Portfolio from './portfolio';
 import Navbar from './navbar';
 import Footer from './footer';
@@ -38,7 +38,7 @@ function App() {
       <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
         {currentTab === 'About' && <Homescreen />}
         {currentTab === 'About' && <AboutMe />}
-        {currentTab === 'Resume' && <Resume />}
+        {currentTab === 'Experience' && <Experience />}
         {currentTab === 'Portfolio' && <Portfolio />}
         {currentTab === 'Gallery' && <Gallery />}
       <Footer currentTab={currentTab} setCurrentTab={setCurrentTab} />

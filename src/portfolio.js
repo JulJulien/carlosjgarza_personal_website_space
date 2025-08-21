@@ -8,10 +8,11 @@ import { RiOpenaiFill } from "react-icons/ri";
 import { FaUnity } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
+import { SiRstudioide } from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
+import { SiR } from "react-icons/si";  // "si" = simple-icons set
 
-
-
-function PortfolioItem({ title, description, image, icons,alt }) {
+function PortfolioItem({ title, description, description2, image, icons,alt }) {
     return (
         <div className="portfolio-item">
             <div className="portfolio-thumbnail">
@@ -24,6 +25,11 @@ function PortfolioItem({ title, description, image, icons,alt }) {
             <div className="portfolio-description">
                 <p>{description}</p>
             </div>
+            {description2 && (
+                <div className="portfolio-description2">
+                    <p>{description2}</p>
+                </div>
+            )}
             <div className="portfolio-bottom-container-icons">
                 {icons.map((icon, index) => (
                     <a key={index} href="mailto:your.email@example.com" aria-label="Send email">
@@ -57,34 +63,48 @@ function Portfolio() {
         
     const portfolioItems = [
         {
-            title: "Personal AI Agent",
-            description: "Description of the AI Agent project",
+            title: "Chagas Disease Blood Based Biomarker Research",
+            description: "University of Texas Medical Branch",
+            description2: "Department of Data Science & Biostatistics",
             image: require('./assets/spotify_iconPlacement.png'),
-            icons: [
-                <FaPython />,
-                <RiOpenaiFill />,
+            icons:[
+                <SiR color="#ff7e7e"/>,
+                <SiRstudioide color="#ff7e7e"/>
             ],
-            alt: "AI Agent"
+            alt: "Data Sciecne"
         },
         {
-            title: "Unity RPG",
+            title: "Genomic Research",
+            description: "University of Texas Rio Grande Valley",
+            description2: "Department of Genomics",
+            image: require('./assets/spotify_iconPlacement.png'),
+            icons:[
+                <FaPython color="#ff7e7e"/>,
+                <SiRstudioide color="#ff7e7e"/>
+            ],
+            alt: "Data Sciecne"
+        },
+        {
+            title: "Psychology Research",
+            description: "University of Texas Rio Grande Valley",
+            description2: "Department of Psychology",
+            image: require('./assets/spotify_iconPlacement.png'),
+            icons:[
+                <SiR color="#ff7e7e"/>,
+                <SiRstudioide color="#ff7e7e"/>
+            ],
+            alt: "Data Sciecne"
+        },
+        {
+            title: "Dungeon Crawler RPG",
             description: "Description of the Game Development project",
             image: require('./assets/spotify_iconPlacement.png'),
             icons: [
                 <CSharpIcon />,
-                <FaUnity />
+                <FaUnity />,
+                <VscVscode/>
             ],            
             alt: "Game Development"
-        },
-        {
-            title: "Spotify Widget",
-            description: "This is a description of the Spotify Widget project",
-            image: require('./assets/spotify_iconPlacement.png'),
-            icons: [
-                <FaPython />,
-                <FaSpotify />
-            ],
-            alt: "Spotify Widget"
         },
         {
             title: "This Website!",
@@ -92,28 +112,11 @@ function Portfolio() {
             image: require('./assets/spotify_iconPlacement.png'),
             icons: [
                 <FaReact />,
-                <RiJavascriptFill />
+                <RiJavascriptFill />,
+                <VscVscode/>
             ],
             alt: "Web Development"
-        },
-        {
-            title: "ASCII Art Converter",
-            description: "Description of the ASCII project",
-            image: require('./assets/spotify_iconPlacement.png'),
-            icons: [
-                <FaPython />,
-            ],
-            alt: "ASCII"
-        },
-        {
-            title: "Attendance System",
-            description: "This is a description of the Attendance project",
-            image: require('./assets/spotify_iconPlacement.png'),
-            icons: [
-                <FaPython />,
-            ],
-            alt: "Attendance"
-        },
+        }
     ];
 
     return (
@@ -125,6 +128,7 @@ function Portfolio() {
                         key={index}
                         title={item.title}
                         description={item.description}
+                        description2={item.description2}
                         image={item.image}
                         icons={item.icons}
                         alt={item.alt}

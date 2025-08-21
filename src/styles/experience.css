@@ -1,0 +1,153 @@
+.experience-full-page{
+    width:100%;
+    background-color: #000621;
+    padding-bottom: 100px; /* Add space for footer */
+}
+
+.experience-container1{
+    width:100%;
+    min-height: 1000px;
+    background-color: #000621;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.experience-image{
+    max-width: 800px;
+    animation: fadeIn 2s ease-out;
+    transition: all 0.3s ease;
+}
+
+.experience-image:hover{
+    scale: 1.02;
+    transition: scale 0.5s ease;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 60px;
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-text{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.arrow1{
+    width: 30px;
+    height: 30px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.experience-container2{
+    padding-top: 150px;
+    max-width: 1200px;
+    background-color: #000621;
+    margin: 0 auto;
+    padding-bottom: 50px; /* Extra padding for last section */
+}
+
+/* ==========================================================================
+   Experience Container Styles
+   ========================================================================== */
+   .container-section {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    min-height: 10vh;
+    border-radius: 10px;
+    padding: 20px;
+    border: 5px solid #000000;  /* Blue border for work experience */
+    margin-bottom: 50px;
+    background-color: #ebebeb;
+    animation: fadeIn 1.5s ease-in-out;
+
+}
+
+
+/* ==========================================================================
+   Work Experience Styles
+   ========================================================================== */
+.experience-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid #000000;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Experience Header
+   ========================================================================== */
+.experience-header {
+    margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.company {
+    font-weight: 600;
+    color: #000000;
+}
+
+.location {
+    color: #666;
+    font-size:1rem;
+}
+
+.date {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 1rem;
+}
+
+/* Experience Details
+   ========================================================================== */
+.experience-details {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-details li {
+    margin-bottom: 8px;
+    color: #212529;
+    line-height: 1.5;
+}
+
+.experience-details li:last-child {
+    margin-bottom: 0;
+}
+
+.title{
+    font-size: 2em;   
+    font-weight: bold;
+    color: #000000;
+}

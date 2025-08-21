@@ -53,9 +53,9 @@
     align-items: center;
     justify-content: center;
     gap: 10px; /* space between icons */
-    padding: 0 20px; /* match .homepage-button horizontal padding */
+    padding-right: 20px;
   }
-  
+
   .icon-group .header-icon {
     color: rgb(255, 255, 255);
     padding-left: 20px;
