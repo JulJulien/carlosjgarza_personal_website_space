@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import './styles/portfolio.css';
 
@@ -12,9 +12,9 @@ import { SiRstudioide } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { SiR } from "react-icons/si";  // "si" = simple-icons set
 
-function PortfolioItem({ title, description, description2, image, icons,alt }) {
+function PortfolioItem({ title, description, description2, image, icons,alt, onClick }) {
     return (
-        <div className="portfolio-item">
+        <div className="portfolio-item" onClick={onClick}>
             <div className="portfolio-thumbnail">
                 <img src={image} alt={alt} />
         </div>
@@ -60,6 +60,8 @@ function CSharpIcon() {
 }
 
 function Portfolio() {
+    const [selectedItem, setSelectedItem] = useState(null); // holds clicked project
+    const [isFadingOut, setIsFadingOut] = useState(false);
         
     const portfolioItems = [
         {
@@ -71,7 +73,8 @@ function Portfolio() {
                 <SiR color="#ff7e7e"/>,
                 <SiRstudioide color="#ff7e7e"/>
             ],
-            alt: "Data Sciecne"
+            alt: "Data Sciecne",
+            reportSrc: "/SIBDS_Chagas_Disease_Biomarkers.html"
         },
         {
             title: "Genomic Research",
@@ -82,7 +85,8 @@ function Portfolio() {
                 <FaPython color="#ff7e7e"/>,
                 <SiRstudioide color="#ff7e7e"/>
             ],
-            alt: "Data Sciecne"
+            alt: "Data Sciecne",
+            reportSrc: null
         },
         {
             title: "Psychology Research",
@@ -93,7 +97,8 @@ function Portfolio() {
                 <SiR color="#ff7e7e"/>,
                 <SiRstudioide color="#ff7e7e"/>
             ],
-            alt: "Data Sciecne"
+            alt: "Data Sciecne",
+            reportSrc: null
         },
         {
             title: "Dungeon Crawler RPG",
@@ -104,7 +109,8 @@ function Portfolio() {
                 <FaUnity />,
                 <VscVscode/>
             ],            
-            alt: "Game Development"
+            alt: "Game Development",
+            reportSrc: null
         },
         {
             title: "This Website!",
@@ -115,26 +121,57 @@ function Portfolio() {
                 <RiJavascriptFill />,
                 <VscVscode/>
             ],
-            alt: "Web Development"
+            alt: "Web Development",
+            reportSrc: null
         }
     ];
 
     return (
         <div className="portfolio-full-page">
             <Container fluid className="portfolio-container">
-            <div className="portfolio-grid">
-                {portfolioItems.map((item, index) => (
-                    <PortfolioItem
-                        key={index}
-                        title={item.title}
-                        description={item.description}
-                        description2={item.description2}
-                        image={item.image}
-                        icons={item.icons}
-                        alt={item.alt}
+            {!selectedItem && (
+                <div className="portfolio-grid">
+                    {portfolioItems.map((item, index) => (
+                        <PortfolioItem
+                            key={index}
+                            title={item.title}
+                            description={item.description}
+                            description2={item.description2}
+                            image={item.image}
+                            icons={item.icons}
+                            alt={item.alt}
+                            onClick={() => {
+                                if (item.reportSrc) setSelectedItem(item);
+                            }}
+                        />
+                    ))}
+                </div>
+            )}
+
+            {selectedItem && (
+                <div className={`report-container ${isFadingOut ? 'fade-exit' : 'fade-enter'}`}>
+                    <div className="report-header">
+                        <button
+                            className={"portfolio-toggle-btn"}
+                            onClick={() => {
+                                setIsFadingOut(true);
+                                setTimeout(() => {
+                                    setSelectedItem(null);
+                                    setIsFadingOut(false);
+                                }, 500); // match fade-out duration
+                            }}
+                        >
+                            ← Back to Projects
+                        </button>
+                        <h2 className="report-title">{selectedItem.title}</h2>
+                    </div>
+                    <iframe
+                        title={selectedItem.title}
+                        className="report-frame"
+                        src={selectedItem.reportSrc}
                     />
-                ))}
-            </div>
+                </div>
+            )}
         </Container>
         </div>
     );

@@ -1,0 +1,22 @@
+/* Background + base text */
+pre code {
+    background-color: #2d2d2d !important; /* editor bg */
+    color: #f8f8f2 !important; /* base text */
+    font-family: "Fira Code", monospace;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    padding: 0.75em;
+  }
+  
+  /* Syntax highlighting — mimics RStudio Pastel on Dark */
+  code span.kw { color: #66d9ef; }     /* keywords */
+  code span.dt { color: #f92672; }     /* data types */
+  code span.dv { color: #ae81ff; }     /* numeric values */
+  code span.st { color: #e6db74; }     /* strings */
+  code span.co { color: #75715e; }     /* comments */
+  code span.op { color: #f92672; }     /* operators */
+  code span.fu { color: #a6e22e; }     /* functions */
+  code span.va { color: #f8f8f2; }     /* variables */
+  code span.cn { color: #fd971f; }     /* constants */
+  code span.an { color: #66d9ef; }     /* annotations */
+  code span.er { color: #f44747; background-color: #1e1e1e; } /* errors */
