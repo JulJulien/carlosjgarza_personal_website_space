@@ -1,8 +1,7 @@
 .full-container-aboutme {
     width: 100%;
     min-height: 100vh;
-    /* Two solid colors: top half dark navy, bottom half medium blue */
-    background: linear-gradient(180deg, #000621 50%, #012e81 50%);
+    background: #000621;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +20,7 @@
 .blue-container{
     width: 100%;
     position: relative;
-    background: linear-gradient(180deg, #012e81 0%);
+    background: #000621;
     font-size: 20px;
     text-align: center;
     color: white;
@@ -65,7 +64,7 @@
     width: 100%;
     margin: 0;
     text-align: center;
-    background: linear-gradient(135deg, #012e81 0%);
+    background: #000621;
     position: relative;
     z-index: 2;
     padding: 40px 0;
@@ -171,7 +170,7 @@
 /* Skills section with original blue */
 .skills-section-wrapper {
     width: 100%;
-    background: linear-gradient(180deg, #012e81 0%);
+    background: #000621;
     padding: 60px 0;
     position: relative;
     z-index: 2;
@@ -180,7 +179,7 @@
 /* Philosophy section with similar styling */
 .philosophy-section-wrapper {
     width: 100%;
-    background: linear-gradient(180deg, #012e81 0%);
+    background: #000621;
     padding: 60px 0;
     position: relative;
     z-index: 2;

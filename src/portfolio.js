@@ -100,7 +100,7 @@ function Portfolio() {
         },
         {
             title: "Dungeon Crawler RPG",
-            description: "Description of the Game Development project",
+            description: "A Dungeon Crawler game that centers around several interconnected systems including a Turn-Based Combat System, Dialouge System, Party & Enemy System, and smaller systems that fill out the world.",
             image: require('./assets/shapes4.png'),
             icons: [
                 <CSharpIcon />,
