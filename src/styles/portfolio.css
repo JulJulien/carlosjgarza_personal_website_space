@@ -135,6 +135,7 @@
     border-style: solid;
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
+    border-radius: 0;
 }
 
 .portfolio-item:hover {
@@ -146,6 +147,7 @@
 .portfolio-thumbnail {
     width: 100%;
     overflow: hidden;
+    border-radius: 0;
 }
 
 .portfolio-thumbnail img {
@@ -154,6 +156,7 @@
     border-bottom-width: 5px;
     border-bottom-style: solid;
     object-fit: cover;
+    border-radius: 0;
 }
 
 .portfolio-bottom-container {

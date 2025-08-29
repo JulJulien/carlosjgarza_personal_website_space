@@ -36,7 +36,7 @@
 .homepage-name h2 {
   font-size: 28px;
   margin-bottom: 30px;
-  color: rgb(255, 126, 126);
+  color: #ff7e7e;
   font-weight: 500;
   animation: fadeIn 1.5s ease-out;
   transition: all 0.3s ease;
@@ -148,7 +148,7 @@
 
 
 .icon-group .header-icon-2:hover {
-  color: rgb(255, 126, 126);
+  color: #ff7e7e;
   scale: 1.15;
   transition: scale 0.5s ease;
 }

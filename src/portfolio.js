@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import './styles/portfolio.css';
 
@@ -60,15 +60,13 @@ function CSharpIcon() {
 }
 
 function Portfolio() {
-    const [selectedItem, setSelectedItem] = useState(null); // holds clicked project
-    const [isFadingOut, setIsFadingOut] = useState(false);
         
     const portfolioItems = [
         {
             title: "Chagas Disease Blood Based Biomarker Research",
             description: "University of Texas Medical Branch",
             description2: "Department of Data Science & Biostatistics",
-            image: require('./assets/spotify_iconPlacement.png'),
+            image: require('./assets/shapes1.png'),
             icons:[
                 <SiR color="#ff7e7e"/>,
                 <SiRstudioide color="#ff7e7e"/>
@@ -77,25 +75,25 @@ function Portfolio() {
             reportSrc: "/SIBDS_Chagas_Disease_Biomarkers.html"
         },
         {
-            title: "Genomic Research",
-            description: "University of Texas Rio Grande Valley",
-            description2: "Department of Genomics",
-            image: require('./assets/spotify_iconPlacement.png'),
+            title: "",
+            description: "in progress",
+            description2: "",
+            image: require('./assets/shapes5.png'),
             icons:[
-                <FaPython color="#ff7e7e"/>,
-                <SiRstudioide color="#ff7e7e"/>
+                //<FaPython color="#ff7e7e"/>,
+                //<SiRstudioide color="#ff7e7e"/>
             ],
             alt: "Data Sciecne",
             reportSrc: null
         },
         {
-            title: "Psychology Research",
-            description: "University of Texas Rio Grande Valley",
-            description2: "Department of Psychology",
-            image: require('./assets/spotify_iconPlacement.png'),
+            title: "",
+            description: "in progress",
+            description2: "",
+            image: require('./assets/shapes7.png'),
             icons:[
-                <SiR color="#ff7e7e"/>,
-                <SiRstudioide color="#ff7e7e"/>
+                //<SiR color="#ff7e7e"/>,
+                //<SiRstudioide color="#ff7e7e"/>
             ],
             alt: "Data Sciecne",
             reportSrc: null
@@ -103,7 +101,7 @@ function Portfolio() {
         {
             title: "Dungeon Crawler RPG",
             description: "Description of the Game Development project",
-            image: require('./assets/spotify_iconPlacement.png'),
+            image: require('./assets/shapes4.png'),
             icons: [
                 <CSharpIcon />,
                 <FaUnity />,
@@ -115,7 +113,7 @@ function Portfolio() {
         {
             title: "This Website!",
             description: "Made with React, Bootstrap, and CSS. The website acts as a an extended resume, a portfolio for artwork and programming.",
-            image: require('./assets/spotify_iconPlacement.png'),
+            image: require('./assets/shapes3.png'),
             icons: [
                 <FaReact />,
                 <RiJavascriptFill />,
@@ -129,7 +127,6 @@ function Portfolio() {
     return (
         <div className="portfolio-full-page">
             <Container fluid className="portfolio-container">
-            {!selectedItem && (
                 <div className="portfolio-grid">
                     {portfolioItems.map((item, index) => (
                         <PortfolioItem
@@ -141,38 +138,14 @@ function Portfolio() {
                             icons={item.icons}
                             alt={item.alt}
                             onClick={() => {
-                                if (item.reportSrc) setSelectedItem(item);
+                                if (item.reportSrc) {
+                                    window.open(item.reportSrc, '_blank');
+                                }
                             }}
                         />
                     ))}
                 </div>
-            )}
-
-            {selectedItem && (
-                <div className={`report-container ${isFadingOut ? 'fade-exit' : 'fade-enter'}`}>
-                    <div className="report-header">
-                        <button
-                            className={"portfolio-toggle-btn"}
-                            onClick={() => {
-                                setIsFadingOut(true);
-                                setTimeout(() => {
-                                    setSelectedItem(null);
-                                    setIsFadingOut(false);
-                                }, 500); // match fade-out duration
-                            }}
-                        >
-                            ← Back to Projects
-                        </button>
-                        <h2 className="report-title">{selectedItem.title}</h2>
-                    </div>
-                    <iframe
-                        title={selectedItem.title}
-                        className="report-frame"
-                        src={selectedItem.reportSrc}
-                    />
-                </div>
-            )}
-        </Container>
+            </Container>
         </div>
     );
 }

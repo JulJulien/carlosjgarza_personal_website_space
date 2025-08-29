@@ -29,7 +29,7 @@
   }
   
   .homepage-button.selected {
-    color: rgb(255, 126, 126);
+    color: #ff7e7e;
     transform: scale(1.05);
   }
   
