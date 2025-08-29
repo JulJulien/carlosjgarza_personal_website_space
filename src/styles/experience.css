@@ -52,7 +52,7 @@
 
 .experience-container2{
     padding-top: 150px;
-    max-width: 1200px;
+    max-width: 1500px;
     background-color: #000621;
     margin: 0 auto;
     padding-bottom: 50px; /* Extra padding for last section */
@@ -150,4 +150,44 @@
     font-size: 2em;   
     font-weight: bold;
     color: #000000;
+}
+
+/* ==========================================================================
+   New Experience Row (25% image / 75% text)
+   ========================================================================== */
+.experience-content{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.experience-row{
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 25% / 75% split */
+    gap: 20px;
+    align-items: start;
+    background: #ebebeb;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.experience-row-image{
+    width: 100%;
+}
+
+.experience-row-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.experience-row-title{
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-row-subtitle{
+    margin-bottom: 0.75rem;
 }

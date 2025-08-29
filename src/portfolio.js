@@ -66,7 +66,7 @@ function Portfolio() {
             title: "Chagas Disease Blood Based Biomarker Research",
             description: "University of Texas Medical Branch",
             description2: "Department of Data Science & Biostatistics",
-            image: require('./assets/shapes1.png'),
+            image: require('./assets/shapes.png'),
             icons:[
                 <SiR color="#ff7e7e"/>,
                 <SiRstudioide color="#ff7e7e"/>
