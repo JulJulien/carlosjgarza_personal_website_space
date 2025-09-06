@@ -1,16 +1,18 @@
 .resume-full-page{
     width:100%;
-    background-color: #000621;
+    background-color: var(--color-bg-primary);
     padding-bottom: 100px; /* Add space for footer */
+    transition: background-color 0.3s ease;
 }
 
 .resume-container1{
     width:100%;
     min-height: 1000px;
-    background-color: #000621;
+    background-color: var(--color-bg-primary);
     display: flex;
     justify-content: center;
     padding-top: 150px;
+    transition: background-color 0.3s ease;
 }
 
 .resume-image{
@@ -34,7 +36,7 @@
 }
 
 .arrow-text{
-    color: white;
+    color: var(--color-text-primary);
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -43,8 +45,8 @@
 .arrow1{
     width: 30px;
     height: 30px;
-    border-right: 3px solid white;
-    border-bottom: 3px solid white;
+    border-right: 3px solid var(--color-text-primary);
+    border-bottom: 3px solid var(--color-text-primary);
     transform: rotate(45deg);
     animation: float 3s ease-in-out infinite;
     opacity: 0.7;
@@ -53,9 +55,10 @@
 .resume-container2{
     padding-top: 150px;
     max-width: 1200px;
-    background-color: #000621;
+    background-color: var(--color-bg-primary);
     margin: 0 auto;
     padding-bottom: 50px; /* Extra padding for last section */
+    transition: background-color 0.3s ease;
 }
 
 /* ==========================================================================
@@ -68,10 +71,11 @@
     min-height: 10vh;
     border-radius: 10px;
     padding: 20px;
-    border: 5px solid #000000;  /* Blue border for work experience */
+    border: 5px solid var(--color-border-card);  /* Blue border for work experience */
     margin-bottom: 50px;
-    background-color: #ebebeb;
+    background-color: var(--color-bg-card);
     animation: fadeIn 1.5s ease-in-out;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 
 }
 
@@ -82,7 +86,7 @@
 .experience-item {
     margin-bottom: 25px;
     padding-bottom: 20px;
-    border-bottom: 5px solid #000000;
+    border-bottom: 5px solid var(--color-border-card);
 }
 
 .experience-item:last-child {
@@ -98,7 +102,7 @@
 }
 
 .experience-header h3 {
-    color: #333;
+    color: var(--color-text-secondary);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     display: flex;
@@ -114,16 +118,16 @@
 
 .company {
     font-weight: 600;
-    color: #000000;
+    color: var(--color-text-card);
 }
 
 .location {
-    color: #666;
+    color: var(--color-text-secondary);
     font-size:1rem;
 }
 
 .date {
-    color: #000000;
+    color: var(--color-text-card);
     font-size: 1rem;
     font-weight: normal;
     margin-left: 1rem;
@@ -138,7 +142,7 @@
 
 .experience-details li {
     margin-bottom: 8px;
-    color: #212529;
+    color: var(--color-text-card);
     line-height: 1.5;
 }
 
@@ -149,7 +153,7 @@
 .title{
     font-size: 2em;   
     font-weight: bold;
-    color: #000000;
+    color: var(--color-text-card);
 }
 
 

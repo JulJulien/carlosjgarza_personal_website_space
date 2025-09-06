@@ -1,6 +1,7 @@
 .portfolio-full-page {
     width: 100%;
-    background: #000621;
+    background: var(--color-bg-primary);
+    transition: background-color 0.3s ease;
 }
 
 .portfolio-container {
@@ -46,10 +47,10 @@
 }
 
 .portfolio-item {
-    background: #000621;
-    border-color: rgb(255, 255, 255);
+    background: var(--color-bg-primary);
+    border-color: var(--color-border);
     border-style: solid;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
     overflow: hidden;
 }
 
@@ -74,18 +75,18 @@
 
 .portfolio-bottom-container {
     background: transparent;
-    border-top: 5px solid white;
+    border-top: 5px solid var(--color-border);
 }
 
 .portfolio-title {
     padding: 1rem;
     text-align: center;
-    color: white;
+    color: var(--color-text-primary);
 }
 
 
 .portfolio-description {
-    color: white;
+    color: var(--color-text-primary);
     text-align: center;
 }
 
@@ -93,7 +94,7 @@
 .portfolio-bottom-container-icons{
     height: 100%;
     display: flex;
-    color: white;
+    color: var(--color-text-primary);
     font-size: 3em;
     justify-content: center;
     padding-bottom: 1rem;

@@ -1,7 +1,7 @@
 .full-container-aboutme {
     width: 100%;
     min-height: 100vh;
-    background: #000621;
+    background: var(--color-bg-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,6 +9,7 @@
     overflow-x: hidden;
     position: relative;
     padding-bottom: 100px;
+    transition: background-color 0.3s ease;
 }
 
 /* Remove the decorative rectangles since we're doing background sections instead */
@@ -20,16 +21,17 @@
 .blue-container{
     width: 100%;
     position: relative;
-    background: #000621;
+    background: var(--color-bg-primary);
     font-size: 20px;
     text-align: center;
-    color: white;
+    color: var(--color-text-primary);
     padding: 80px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 1;
     overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Remove blue container decorative rectangles */
@@ -64,30 +66,32 @@
     width: 100%;
     margin: 0;
     text-align: center;
-    background: #000621;
+    background: var(--color-bg-primary);
     position: relative;
     z-index: 2;
     padding: 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 .about-me-card {
     width: 80%;
     max-width: 1500px;
-    background: white;
-    color: black;
-    border: 3px solid black;
+    background: var(--color-bg-card);
+    color: var(--color-text-card);
+    border: 3px solid var(--color-border-card);
     border-radius: 25px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px var(--color-shadow);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .about-me-card h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: black;
+    color: var(--color-text-card);
     font-weight: bold;
     text-align: center;
 }
@@ -127,7 +131,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: black;
+    color: var(--color-accent);
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -135,7 +139,7 @@
 }
 
 .social-link:hover {
-    color: #ff7e7e;
+    color: var(--color-accent);
     text-decoration: none;
     transform: translateX(5px);
 }
@@ -152,7 +156,7 @@
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: black;
+    color: var(--color-text-card);
 }
 
 /* Layout for about me section */
@@ -170,25 +174,27 @@
 /* Skills section with original blue */
 .skills-section-wrapper {
     width: 100%;
-    background: #000621;
+    background: var(--color-bg-primary);
     padding: 60px 0;
     position: relative;
     z-index: 2;
+    transition: background-color 0.3s ease;
 }
 
 /* Philosophy section with similar styling */
 .philosophy-section-wrapper {
     width: 100%;
-    background: #000621;
+    background: var(--color-bg-primary);
     padding: 60px 0;
     position: relative;
     z-index: 2;
+    transition: background-color 0.3s ease;
 }
 
 .philosophy-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: white;
+    color: var(--color-text-primary);
     font-weight: bold;
     text-align: center;
 }
@@ -231,8 +237,8 @@
 
 .section {
     width: 32%;
-    background: #f8f8ff;
-    color: black;
+    background: var(--color-bg-card);
+    color: var(--color-text-card);
     border-radius: 20px;
     padding: 32px 24px;
     display: flex;
@@ -240,6 +246,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .section:hover {
@@ -251,7 +258,7 @@
 .icon {
     width: 64px;
     height: 64px;
-    background: #ff7e7e;
+    background: var(--color-accent);
     border-radius: 50%;
     margin-bottom: 16px;
     display: flex;
@@ -267,7 +274,7 @@
 }
 
 .subtitle-aboutme {
-    color: #000000;
+    color: var(--color-text-card);
     font-style: bold;
     font-weight: 700;
     margin-top: 16px;
@@ -277,24 +284,25 @@
 .description-aboutme {
     text-align: center;
     margin-bottom: 12px;
-    color: #444;
+    color: var(--color-text-secondary);
 }
 
 
 
 .books-section-wrapper {
     width: 100%;
-    background-color: #000621;
+    background-color: var(--color-bg-primary);
     padding: 60px 0;
     position: relative;
     z-index: 2;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .books-section-wrapper h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: white;
+    color: var(--color-text-primary);
     font-weight: bold;
     text-align: center;
 }
@@ -325,7 +333,7 @@
 
 .book-description {
     width: 100%;
-    color: white;
+    color: var(--color-text-primary);
     font-size: 16px;
 
 }
